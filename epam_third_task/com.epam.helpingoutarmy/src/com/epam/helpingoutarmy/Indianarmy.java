@@ -1,10 +1,17 @@
 package com.epam.helpingoutarmy;
 
-import java.util.*;
-import static java.util.stream.Collectors.*;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Indianarmy {
+  /**
+  * Finding total distance of the x-axis, that is not protected by the armed forces.
+  * @param args unused
+  * @throws Exception unused
+  */
   public static void main(String[] args) throws Exception {
-    int i,checkpoints;
+    int i;
+    int checkpoints;
     long sum = 0;
     Scanner scan = new Scanner(System.in);
     checkpoints = scan.nextInt();
@@ -28,8 +35,8 @@ public class Indianarmy {
       else {
         mindefend[i] = mindefend[1];
         maxdefend[i] = mindefend[1];
-       }
-        }
+      }
+    }
     Arrays.sort(mindefend);
     Arrays.sort(maxdefend);
     for (i = 1;i < mindefend.length;i++) {
@@ -37,6 +44,6 @@ public class Indianarmy {
         sum += mindefend[i] - maxdefend[i - 1];
       }
     }
-          System.out.print(sum);
-    } 
+    System.out.print(sum);
+  } 
 }

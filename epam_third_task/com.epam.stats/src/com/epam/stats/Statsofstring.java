@@ -3,7 +3,7 @@ package com.epam.stats;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class statsofstring {
+public class Statsofstring {
   static int power(int a, int b, int mod) {
     if (b == 0) {
       return 1;
@@ -15,21 +15,24 @@ public class statsofstring {
     }
     return p;
   }
+  
   static int[] array;
   /**
-   * 
-   * @param i
+   * Finding the number.
+   * @param i finding the number
    * @return
    */
+  
   static int find(int i) {
     return array[i] < 0 ? i : (array[i] = find(array[i]));
   }
   /**
-   * 
-   * @param i
-   * @param j
+   * Joining the number.
+   * @param i finding the number
+   * @param j finding the number
    * @return
    */
+  
   static boolean join(int i, int j) {
     i = find(i);
     j = find(j);
@@ -47,15 +50,16 @@ public class statsofstring {
     }
     return true;
   }
-/**
- * 
- * @param k
- * @param v
- * @param n
- * @param a
- * @param mod
+  /**
+ * Simplifying the array.
+ * @param k first value of for loop 
+ * @param v second value of for loop
+ * @param n total number
+ * @param a next number
+ * @param mod modulus
  * @return
  */
+  
   static int simplify(int k, int v, int n, int a, int mod) {
     Arrays.fill(array, -1);
     int bcnt = 0;
@@ -73,12 +77,13 @@ public class statsofstring {
     int sum = power(a, cnt, mod);
     return bcnt % 2 == 1 ? sum : (mod - sum) % mod;
   }
-/**
- * 	
- * @param args
- * @throws Exception
+  /**
+ * Finding the sum.
+ * @param args unused
+ * @throws Exception for errors
  */
-public static void main(String[] args) throws Exception {
+  
+  public static void main(String[] args) throws Exception {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
     int a = sc.nextInt();
