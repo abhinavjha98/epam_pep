@@ -2,7 +2,7 @@ package com.epam.helpingoutarmy;
 
 import java.util.*;
 import static java.util.stream.Collectors.*;
-public class indianarmy {
+public class Indianarmy {
   public static void main(String[] args) throws Exception {
     int i,checkpoints;
     long sum = 0;
