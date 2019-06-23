@@ -10,5 +10,6 @@ public class ReplaceString {
 		old_string += string.substring(1, 2).replace("A","");
 		old_string += string.substring(2);
 		return(old_string);
+		
 	}
 }

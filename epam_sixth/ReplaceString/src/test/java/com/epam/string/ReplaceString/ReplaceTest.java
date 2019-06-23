@@ -9,8 +9,8 @@ public class ReplaceTest {
 	@Test
 	public void test() {
 		ReplaceString junit = new ReplaceString();
-		String result = junit.ReplaceAA("AABAA");
-		assertEquals("BAA", result);
+		String result = junit.ReplaceAA("AACD");
+		assertEquals("CD", result);
 	}
 
 }
